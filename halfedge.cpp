@@ -13,7 +13,7 @@ bool HalfEdgeGraph::almostEqual(float a, float b)
 void HalfEdgeGraph::criaestruturadehalfedges(QVector<QVector<float>> listadecurvas)
 {
 
-///https://cs.stackexchange.com/questions/2450/how-do-i-construct-a-doubly-connected-edge-list-given-a-set-of-line-segments/2516#2516
+
     ///1. For each endpoint, create a vertex.
     ///
     ///

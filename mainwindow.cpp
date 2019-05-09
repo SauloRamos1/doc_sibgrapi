@@ -34,7 +34,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
+    //path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
+    path = "/Users/sauloramos/Desktop/doc_v3";
 
     files = path.entryList(QStringList() << "*.svg" << "*.SVG",QDir::Files);
 

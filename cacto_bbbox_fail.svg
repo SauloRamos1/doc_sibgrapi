@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="cacto_bbbox_fail.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70000001"
+     inkscape:cx="344.45095"
+     inkscape:cy="378.69386"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="980"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-32.41665)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.4426266;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 99.372846,164.8459 c -2.250049,-0.34617 -4.402438,-0.73931 -7.264444,-1.08255 m 1.265315,23.69542 c -5.576422,-0.77966 -11.157494,-0.46079 -16.504898,-1.34879 m 0,0 c -5.04228,-0.83733 -9.876797,-2.74774 -14.303745,-7.66406 m 12.492418,16.20591 c -15.260165,-1.89441 -12.435307,-8.71557 -12.492418,-16.20591 -1.889705,-20.12915 -1.868088,-31.53811 -0.216748,-44.49216 9.042848,-14.10224 18.456292,-3.97882 19.993587,3.02932 0,0 -1.23306,21.51835 3.786655,25.44632 0.432291,0.33828 2.92821,0.78921 5.979834,1.33396 L 91.555345,115.69795 C 108.30839,84.14507 114.94908,102.37512 124.11459,113.5559 l 0.69568,62.43402 c -1.84997,4.87833 5.99515,8.41955 12.58507,0.54245 l 3.8557,-30.84562 c 2.9261,-8.84828 17.99329,-2.99889 17.99329,-2.99889 8.13529,29.97976 2.86841,33.15519 4.2841,49.69573 -11.35934,14.06603 -16.36489,10.65912 -23.56262,13.28073 -16.89391,1.60018 -14.99439,17.56488 -14.99439,17.56488 -9.99626,5.59779 -19.99253,5.39803 -29.988795,-0.42841 l -1.396928,-28.32095 c -8.649934,0.66611 -14.319874,0.69442 -18.528205,0.17199 m 18.528205,-0.17199 -0.06893,-2.5535 -0.0362,-1.34085 -0.106856,-3.12671 c 3.981391,0.11255 6.200577,-0.16353 7.937139,-0.26003"
+       id="path4500"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccscccccccccccccccccc"
+       inkscape:export-filename="C:\Users\srdcp\Dropbox\Saulo\ProjetoDoutorado\Apps\_SVGs_Artigo\cacto.png"
+       inkscape:export-xdpi="104"
+       inkscape:export-ydpi="104" />
+  </g>
+</svg>
