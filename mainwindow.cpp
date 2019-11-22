@@ -34,7 +34,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
+    //path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
+    path = "/home/sauloramos/doc_sibgrapi";
 
     files = path.entryList(QStringList() << "*.svg" << "*.SVG",QDir::Files);
 
@@ -201,7 +202,7 @@ void MainWindow::on_pushButton_released()
 
     //image = nsvgParseFromFile("gato.svg", "px", 96);
 
-    image = nsvgParseFromFile(file, "px", 96);
+    image = nsvgParseFromFile(fileName.toStdString().c_str(), "px", 96);
 
     ncurvas = 0;
     //QTime t;
