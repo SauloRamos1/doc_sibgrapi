@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.5
+** Created by: Qt User Interface Compiler version 5.14.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -263,36 +263,36 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QApplication::translate("MainWindow", "Open File", nullptr));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Sampling", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Contour Sampling", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Grid Sampling", nullptr));
-        contoursamplingvalue->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        gridsamplingvalue->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        checkBox->setText(QApplication::translate("MainWindow", "Show sampled points on grid", nullptr));
-        checkBox_2->setText(QApplication::translate("MainWindow", "Show sampled points on contour", nullptr));
-        checkBox_3->setText(QApplication::translate("MainWindow", "Show bounding boxes", nullptr));
-        label_lshapes->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        z_label_3->setText(QApplication::translate("MainWindow", "Lambda Shapes", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Border Cycle", nullptr));
-        label_lsym->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        z_label_5->setText(QApplication::translate("MainWindow", "Lambda Symmetrical Parts", nullptr));
-        z_label_4->setText(QApplication::translate("MainWindow", "Lambda Depth Symmetrical", nullptr));
-        label_ldepthsym->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Symmetrical Limbs", nullptr));
-        z_label_6->setText(QApplication::translate("MainWindow", "Lambda Depth Island", nullptr));
-        z_label_7->setText(QApplication::translate("MainWindow", "Lambda Islands", nullptr));
-        label_lisland->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_ldepthisland->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Island Cycle", nullptr));
-        z_label_9->setText(QApplication::translate("MainWindow", "Lambda Depth Adjacent", nullptr));
-        label_ldepthadj->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_ladj->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        z_label_10->setText(QApplication::translate("MainWindow", "Lambda Adjacent", nullptr));
-        label_adjnewcontour->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        z_label_8->setText(QApplication::translate("MainWindow", "Lambda Adjacent Contour", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "Adjacent Cycle", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Open File", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Sampling", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Contour Sampling", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Grid Sampling", nullptr));
+        contoursamplingvalue->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        gridsamplingvalue->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "Show sampled points on grid", nullptr));
+        checkBox_2->setText(QCoreApplication::translate("MainWindow", "Show sampled points on contour", nullptr));
+        checkBox_3->setText(QCoreApplication::translate("MainWindow", "Show bounding boxes", nullptr));
+        label_lshapes->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        z_label_3->setText(QCoreApplication::translate("MainWindow", "Lambda Shapes", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "Border Cycle", nullptr));
+        label_lsym->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        z_label_5->setText(QCoreApplication::translate("MainWindow", "Lambda Symmetrical Parts", nullptr));
+        z_label_4->setText(QCoreApplication::translate("MainWindow", "Lambda Depth Symmetrical", nullptr));
+        label_ldepthsym->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "Symmetrical Limbs", nullptr));
+        z_label_6->setText(QCoreApplication::translate("MainWindow", "Lambda Depth Island", nullptr));
+        z_label_7->setText(QCoreApplication::translate("MainWindow", "Lambda Islands", nullptr));
+        label_lisland->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        label_ldepthisland->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "Island Cycle", nullptr));
+        z_label_9->setText(QCoreApplication::translate("MainWindow", "Lambda Depth Adjacent", nullptr));
+        label_ldepthadj->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        label_ladj->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        z_label_10->setText(QCoreApplication::translate("MainWindow", "Lambda Adjacent", nullptr));
+        label_adjnewcontour->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        z_label_8->setText(QCoreApplication::translate("MainWindow", "Lambda Adjacent Contour", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QCoreApplication::translate("MainWindow", "Adjacent Cycle", nullptr));
     } // retranslateUi
 
 };

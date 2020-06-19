@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     //path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
-    path = "/home/sauloramos/doc_sibgrapi";
+    path = "/home/sauloramos/Documents/doc_sibgrapi";
 
     files = path.entryList(QStringList() << "*.svg" << "*.SVG",QDir::Files);
 
@@ -1329,7 +1329,8 @@ void MainWindow::gerarbf(QPainter *painter){
                         /// Tem que ser ajustado pro corpo
 
 
-                        float spacing = boundingbox.width()/gridsamplingvalue;
+                        //float spacing = boundingbox.width()/gridsamplingvalue;
+                        float spacing = gridsamplingvalue;
 
 
 
@@ -1667,7 +1668,8 @@ void MainWindow::gerarbf(QPainter *painter){
                         /// Tem que ser ajustado pro corpo
 
 
-                        float spacing = boundingbox.width()/gridsamplingvalue;
+                        //float spacing = boundingbox.width()/gridsamplingvalue;
+                        float spacing = gridsamplingvalue;
                         int r,g,b;
                         // qDebug ()<< "Spacing" << spacing;
                         for(QVector3D pi:knownPoints){

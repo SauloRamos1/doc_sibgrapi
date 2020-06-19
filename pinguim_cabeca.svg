@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58333"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="pinguim_cabeca.svg"
+   inkscape:export-filename="C:\Users\srdcp\Dropbox\Saulo\ProjetoDoutorado\Apps\_SVGs_Artigo\pinguim\pinguim.png"
+   inkscape:export-xdpi="95.999992"
+   inkscape:export-ydpi="95.999992">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35000089"
+     inkscape:cx="477.60475"
+     inkscape:cy="466.41087"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1077"
+     inkscape:window-height="705"
+     inkscape:window-x="3192"
+     inkscape:window-y="119"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-32.416684)">
+    <path
+       style="fill:none;stroke:#080000;stroke-width:0.06902544px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 88.427422,276.27386 Z"
+       id="path4500"
+       inkscape:connector-curvature="0" />
+    <g
+       transform="translate(-11.08694,-19.771193)"
+       id="layer1-3"
+       inkscape:label="Camada 1">
+      <path
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:connector-curvature="0"
+         id="path4496-3"
+         d="m 81.831625,77.620157 c 3.398515,-2.5284 3.480272,-5.1408 14.567807,-7.85355 4.629318,-2.08543 10.056828,-8.475325 18.111178,-9.40951 13.995,0.985469 20.81168,16.02506 24.93596,24.81999 2.27476,6.81541 4.08499,11.53459 6.03689,16.892163 0.4967,6.9493 -42.30148,8.47033 -43.83452,-0.59266 1.28703,-1.606143 2.82326,-3.155733 1.57478,-5.334303 -2.08768,-2.96112 -3.426999,-11.32972 -8.924484,-15.41048 -3.112978,-1.50828 -11.229198,-2.53506 -12.467611,-3.11165"
+         style="fill:none;stroke:#080000;stroke-width:0.78265172;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4500-6"
+         d="M 88.427422,276.27386 Z"
+         style="fill:none;stroke:#080000;stroke-width:0.06902544px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path4514"
+         d="m 102.99292,74.531135 c 1.42501,-4.423105 3.56498,-3.86537 4.36145,-2.51453 0.69065,5.55133 -2.94822,3.81464 -4.36145,2.51453"
+         style="fill:none;stroke:#080000;stroke-width:0.78265172;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
