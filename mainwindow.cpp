@@ -34,8 +34,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    //path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
-    path = "/home/sauloramos/Documents/doc_sibgrapi";
+    path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
+    //path = "/home/sauloramos/Documents/doc_sibgrapi";
 
     files = path.entryList(QStringList() << "*.svg" << "*.SVG",QDir::Files);
 
@@ -97,11 +97,153 @@ void MainWindow::paintEvent(QPaintEvent *e){
 
     if (imagemcarregada == true){
 
-        pintaciclos(&painter);
+        for (int i = 0; i <listadeciclos.size(); i++){
 
-        //   gerarbf(&painter);
+            //        \definecolor{outer}{RGB}{251,154,153}
+            //        \definecolor{border}{RGB}{55,126,184}
+            //        \definecolor{island}{RGB}{77,175,74}
+            //        \definecolor{adjacent}{RGB}{152,78,163}
+            //        \definecolor{feature}{RGB}{255,127,0}
+            //        \definecolor{others}{RGB}{228,26,28}
+
+            //Pinta Outer
+            //        if (listadeciclos[i]->cycle == 1){
+            //            QPainterPath  totalPath = criapath (listadeciclos[i]);
+            //            painter->setPen(QPen(QColor(251,154,153,99), 7, Qt::SolidLine));
+            //            painter->drawPath(totalPath);
+            //        }
+
+            //Pinta Border
+
+            if (listadeciclos[i]->cycle == 2){
+                QPainterPath  totalPath = criapath (listadeciclos[i]);
+
+                painter.setPen(QPen(QColor(55,126,184), 3, Qt::DashDotLine));
+                painter.drawPath(totalPath);
+
+                QString id_cycle;
+                id_cycle.append("ID");
+                id_cycle.append(QString::number(listadeciclos[i]->cycle));
+                id_cycle.append("_Ciclo");
+                id_cycle.append(QString::number(i));
+                QRectF boundingbox = totalPath.boundingRect();
+
+                //Printa ID e numero
+                QFont font = painter.font() ;
+                font.setPointSize ( 18 );
+                painter.setFont(font);
+                //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
+                painter.drawText(boundingbox.topRight(), id_cycle);
+            }
+
+            //Pinta Island
+
+            if (listadeciclos[i]->cycle == 3){
+                QPainterPath  totalPath = criapath (listadeciclos[i]);
+                painter.setPen(QPen(QColor(77,175,74), 3, Qt::DashDotLine));
+                painter.drawPath(totalPath);
+                QString id_cycle;
+                id_cycle.append("ID");
+                id_cycle.append(QString::number(listadeciclos[i]->cycle));
+                id_cycle.append("_Ciclo");
+                id_cycle.append(QString::number(i));
+                QRectF boundingbox = totalPath.boundingRect();
+
+                //Printa ID e numero
+                QFont font = painter.font() ;
+                font.setPointSize ( 18 );
+                painter.setFont(font);
+                //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
+                painter.drawText(boundingbox.topRight(), id_cycle);
+            }
+
+            //Pinta Adjacents
+
+            if (listadeciclos[i]->cycle == 4){
+                QPainterPath  totalPath = criapath (listadeciclos[i]);
+                painter.setPen(QPen(QColor(152,78,163), 3, Qt::DashDotLine));
+                painter.drawPath(totalPath);
+                QString id_cycle;
+                id_cycle.append("ID");
+                id_cycle.append(QString::number(listadeciclos[i]->cycle));
+                id_cycle.append("_Ciclo");
+                id_cycle.append(QString::number(i));
+                QRectF boundingbox = totalPath.boundingRect();
+
+                //Printa ID e numero
+                QFont font = painter.font() ;
+                font.setPointSize ( 18 );
+                painter.setFont(font);
+                //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
+                painter.drawText(boundingbox.topRight(), id_cycle);
+            }
+
+            //Pinta Features
+
+            if (listadeciclos[i]->cycle == 5){
+                QPainterPath  totalPath = criapath (listadeciclos[i]);
+                painter.setPen(QPen(QColor(255,127,0), 3, Qt::DashDotLine));
+                painter.drawPath(totalPath);
+
+                QString id_cycle;
+                id_cycle.append("ID");
+                id_cycle.append(QString::number(listadeciclos[i]->cycle));
+                id_cycle.append("_Ciclo");
+                id_cycle.append(QString::number(i));
+                QRectF boundingbox = totalPath.boundingRect();
+
+                //Printa ID e numero
+                QFont font = painter.font() ;
+                font.setPointSize ( 18 );
+                painter.setFont(font);
+                //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
+                painter.drawText(boundingbox.topRight(), id_cycle);
+            }
+
+            //Pinta Others
+
+            //        if (listadeciclos[i]->cycle == 6){
+            //            QPainterPath  totalPath = criapath (listadeciclos[i]);
+            //            painter.setPen(QPen(QColor(228,26,28), 2, Qt::DashDotLine));
+            //            painter.drawPath(totalPath);
+            //        }
+
+            //Pinta Simétricos
+            if (listadeciclos[i]->cycle == 7){
+                QPainterPath  totalPath = criapath (listadeciclos[i]);
+                painter.setPen(QPen(QColor(255,0,0), 3, Qt::DashDotLine));
+                painter.drawPath(totalPath);
+
+                QString id_cycle;
+                id_cycle.append("ID");
+                id_cycle.append(QString::number(listadeciclos[i]->cycle));
+                id_cycle.append("_Ciclo");
+                id_cycle.append(QString::number(i));
+                QRectF boundingbox = totalPath.boundingRect();
+
+                //Printa ID e numero
+                QFont font = painter.font() ;
+                font.setPointSize ( 18 );
+                painter.setFont(font);
+                //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
+                painter.drawText(boundingbox.topRight(), id_cycle);
+            }
+
+            //Pinta Simétricos em Background
+            if (listadeciclos[i]->cycle == 8){
+                QPainterPath  totalPath = criapath (listadeciclos[i]);
+                painter.setPen(QPen(QColor(0,0,255), 3, Qt::DashDotLine));
+                painter.drawPath(totalPath);
+            }
+
+        }
+
+        if (gerarbfButtonClicked == true){
+            gerarbf(&painter);
+        }
+
     }
-
+    gerarbfButtonClicked = false;
 
 }
 
@@ -270,82 +412,6 @@ QPainterPath MainWindow::criapath (HalfEdge* half){
 
 }
 
-void MainWindow::pintaciclos(QPainter *painter){
-
-
-    for (int i = 0; i <listadeciclos.size(); i++){
-
-        //        \definecolor{outer}{RGB}{251,154,153}
-        //        \definecolor{border}{RGB}{55,126,184}
-        //        \definecolor{island}{RGB}{77,175,74}
-        //        \definecolor{adjacent}{RGB}{152,78,163}
-        //        \definecolor{feature}{RGB}{255,127,0}
-        //        \definecolor{others}{RGB}{228,26,28}
-
-        //Pinta Outer
-        //        if (listadeciclos[i]->cycle == 1){
-        //            QPainterPath  totalPath = criapath (listadeciclos[i]);
-        //            painter->setPen(QPen(QColor(251,154,153,99), 7, Qt::SolidLine));
-        //            painter->drawPath(totalPath);
-        //        }
-        //Pinta Border
-
-        if (listadeciclos[i]->cycle == 2){
-            QPainterPath  totalPath = criapath (listadeciclos[i]);
-            painter->setPen(QPen(QColor(55,126,184), 3, Qt::DashDotLine));
-            painter->drawPath(totalPath);
-        }
-
-        //Pinta Island
-
-        if (listadeciclos[i]->cycle == 3){
-            QPainterPath  totalPath = criapath (listadeciclos[i]);
-            painter->setPen(QPen(QColor(77,175,74), 3, Qt::DashDotLine));
-            painter->drawPath(totalPath);
-        }
-
-        //Pinta Adjacents
-
-        if (listadeciclos[i]->cycle == 4){
-            QPainterPath  totalPath = criapath (listadeciclos[i]);
-            painter->setPen(QPen(QColor(152,78,163), 3, Qt::DashDotLine));
-            painter->drawPath(totalPath);
-        }
-
-        //Pinta Features
-
-        if (listadeciclos[i]->cycle == 5){
-            QPainterPath  totalPath = criapath (listadeciclos[i]);
-            painter->setPen(QPen(QColor(255,127,0), 3, Qt::DashDotLine));
-            painter->drawPath(totalPath);
-        }
-
-        //Pinta Others
-
-        //        if (listadeciclos[i]->cycle == 6){
-        //            QPainterPath  totalPath = criapath (listadeciclos[i]);
-        //            painter->setPen(QPen(QColor(228,26,28), 2, Qt::DashDotLine));
-        //            painter->drawPath(totalPath);
-        //        }
-
-        //Pinta Simétricos
-        if (listadeciclos[i]->cycle == 7){
-            QPainterPath  totalPath = criapath (listadeciclos[i]);
-            painter->setPen(QPen(QColor(255,0,0), 3, Qt::DashDotLine));
-            painter->drawPath(totalPath);
-        }
-
-        //Pinta Simétricos em Background
-        if (listadeciclos[i]->cycle == 8){
-            QPainterPath  totalPath = criapath (listadeciclos[i]);
-            painter->setPen(QPen(QColor(0,0,255), 3, Qt::DashDotLine));
-            painter->drawPath(totalPath);
-        }
-
-    }
-
-    gerarbf(painter);
-}
 
 void MainWindow::classificaciclos(){
 
@@ -2960,3 +3026,9 @@ void MainWindow::on_gridsampling_sliderMoved(int position)
 
 
 
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    gerarbfButtonClicked = true;
+    update();
+}

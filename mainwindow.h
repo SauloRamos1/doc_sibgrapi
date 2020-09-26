@@ -62,15 +62,13 @@ public:
     bool imagemcarregada = false;
     int ncurvas = 0;
 
-
+    bool gerarbfButtonClicked = false;
 
     QVector<QVector<float>> listadecurvas;
     QVector<HalfEdge*> listadeciclos;
 
 
     void classificaciclos();
-
-    void pintaciclos(QPainter *painter);
 
     float getPathArea(QPainterPath p, float step);
 
@@ -105,6 +103,7 @@ private slots:
     void on_slider_adjnewcontour_sliderMoved(int position);
     void on_slider_ldepthadj_sliderMoved(int position);
     void on_slider_ladj_sliderMoved(int position);
+    void on_pushButton_2_clicked();
 };
 
 #endif // MAINWINDOW_H

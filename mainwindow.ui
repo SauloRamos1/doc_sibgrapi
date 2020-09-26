@@ -602,6 +602,19 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>1290</x>
+      <y>650</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gerar RBF</string>
+    </property>
+   </widget>
    <zorder>groupBox</zorder>
    <zorder>pushButton</zorder>
    <zorder>listWidget</zorder>
@@ -609,6 +622,7 @@
    <zorder>checkBox_2</zorder>
    <zorder>checkBox_3</zorder>
    <zorder>tabWidget</zorder>
+   <zorder>pushButton_2</zorder>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
