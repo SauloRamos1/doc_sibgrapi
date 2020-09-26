@@ -146,7 +146,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QCheckBox" name="showPointsGrid">
     <property name="geometry">
      <rect>
       <x>1040</x>
@@ -158,8 +158,11 @@
     <property name="text">
      <string>Show sampled points on grid</string>
     </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_2">
+   <widget class="QCheckBox" name="showPointsContour">
     <property name="geometry">
      <rect>
       <x>1040</x>
@@ -171,8 +174,11 @@
     <property name="text">
      <string>Show sampled points on contour</string>
     </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_3">
+   <widget class="QCheckBox" name="showBoundingBox">
     <property name="geometry">
      <rect>
       <x>1040</x>
@@ -183,6 +189,9 @@
     </property>
     <property name="text">
      <string>Show bounding boxes</string>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QTabWidget" name="tabWidget">
@@ -618,9 +627,9 @@
    <zorder>groupBox</zorder>
    <zorder>pushButton</zorder>
    <zorder>listWidget</zorder>
-   <zorder>checkBox</zorder>
-   <zorder>checkBox_2</zorder>
-   <zorder>checkBox_3</zorder>
+   <zorder>showPointsGrid</zorder>
+   <zorder>showPointsContour</zorder>
+   <zorder>showBoundingBox</zorder>
    <zorder>tabWidget</zorder>
    <zorder>pushButton_2</zorder>
   </widget>

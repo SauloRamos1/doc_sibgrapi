@@ -1079,7 +1079,10 @@ void MainWindow::gerarbf(QPainter *painter){
 
                 knownNormals.push_back(vetornormal);
 
-                painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                if (ui->showPointsContour->isChecked()){
+
+                    painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                }
 
             }
 
@@ -1109,7 +1112,7 @@ void MainWindow::gerarbf(QPainter *painter){
 
             qDebug ()<< "Bounding box size: " <<  boundingbox.size() << " - Ciclo:" << i;
 
-            painter->drawText(boundingbox, Qt::BottomRightCorner, s);
+            //painter->drawText(boundingbox, Qt::BottomRightCorner, s);
 
             ///pode ser via seletor de arquivo.
             ///Preencha os vetores com os pontos do desenho e as normais conhecidas
@@ -1143,7 +1146,9 @@ void MainWindow::gerarbf(QPainter *painter){
             // qDebug () << xmax-xmin;
             // qDebug () << ymax-ymin;
 
-            painter->drawRect(boundingbox);
+            if (ui->showBoundingBox->isChecked()){
+                painter->drawRect(boundingbox);
+            }
 
 
             //float spacing = (xmax - xmin) /10;  //5.0;///Espacamento do grid
@@ -1197,7 +1202,10 @@ void MainWindow::gerarbf(QPainter *painter){
                             //painter->setPen(QPen(QColor(51, 153, 255), 4, Qt::SolidLine));
                             //painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
                             //painter->drawPoint(ponto.x(),ponto.y());
-                            painter->drawRoundRect(ponto.x(),ponto.y(),2,2);
+                            if (ui->showPointsGrid->isChecked()){
+                                painter->drawRoundRect(ponto.x(),ponto.y(),2,2);
+                            }
+
                             // painter->drawEllipse(ponto.x(),ponto.y(),1,1);
 
                             ///Tem que dar uma altura para esses pontos, eu tô chutando o z da normal, mas nao sei se serve.
@@ -1332,8 +1340,9 @@ void MainWindow::gerarbf(QPainter *painter){
                             vetornormal.setY(angleline.y2()-angleline.y1());
 
                             knownNormals.push_back(vetornormal);
-
-                            painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                            if (ui->showPointsContour->isChecked()){
+                                painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                            }
                         }
 
 
@@ -1348,7 +1357,7 @@ void MainWindow::gerarbf(QPainter *painter){
 
                         qDebug ()<< "Bounding box size: " <<  boundingbox.size() << " - Ciclo:" << i;
 
-                        painter->drawText(boundingbox, Qt::BottomRightCorner, s);
+                        //painter->drawText(boundingbox, Qt::BottomRightCorner, s);
 
                         ///pode ser via seletor de arquivo.
                         ///Preencha os vetores com os pontos do desenho e as normais conhecidas
@@ -1372,8 +1381,9 @@ void MainWindow::gerarbf(QPainter *painter){
                         float hb; // Altura do ponto da normal mais alta no corpo
                         float hl;  // Altura do ponto da normal mais alta no membro simétrico
 
-                        painter->drawRect(boundingbox);
-
+                        if (ui->showBoundingBox->isChecked()){
+                            painter->drawRect(boundingbox);
+                        }
                         QVector3D pontomaisalto(0,0,0);
                         QVector3D normaldopontomaisalto (0,0,0);
 
@@ -1444,8 +1454,10 @@ void MainWindow::gerarbf(QPainter *painter){
                                         int g = (abs(n.y()) + 1)/2*255;
                                         int b = (n.z() + 1)/2*255;
 
-                                        painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
-                                        painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
+                                        if (ui->showPointsGrid->isChecked()){
+                                            painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
+                                            painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
+                                        }
 
                                         ///Tem que dar uma altura para esses pontos, eu tô chutando o z da normal, mas nao sei se serve.
                                         //p.setZ(n.z());
@@ -1682,8 +1694,9 @@ void MainWindow::gerarbf(QPainter *painter){
                             vetornormal.setY(angleline.y2()-angleline.y1());
 
                             knownNormals.push_back(vetornormal);
-
-                            painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*1,ponto.y() + vetornormal.y()*1);
+                            if (ui->showPointsContour->isChecked()){
+                                painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*1,ponto.y() + vetornormal.y()*1);
+                            }
                         }
 
 
@@ -1698,7 +1711,7 @@ void MainWindow::gerarbf(QPainter *painter){
 
                         qDebug ()<< "Bounding box size: " <<  boundingbox.size() << " - Ciclo:" << i;
 
-                        painter->drawText(boundingbox, Qt::BottomRightCorner, s);
+                        //painter->drawText(boundingbox, Qt::BottomRightCorner, s);
 
                         ///pode ser via seletor de arquivo.
                         ///Preencha os vetores com os pontos do desenho e as normais conhecidas
@@ -1722,7 +1735,9 @@ void MainWindow::gerarbf(QPainter *painter){
                         float hb; // Altura do ponto da normal mais alta no corpo
                         float hl;  // Altura do ponto da normal mais alta no membro simétrico
 
-                        painter->drawRect(boundingbox);
+                        if (ui->showBoundingBox->isChecked()){
+                            painter->drawRect(boundingbox);
+                        }
 
                         QVector3D pontomaisalto(0,0,0);
                         QVector3D normaldopontomaisalto (0,0,0);
@@ -1787,9 +1802,11 @@ void MainWindow::gerarbf(QPainter *painter){
                                         r = (abs(n.x()) + 1)/2*255;
                                         g = (abs(n.y()) + 1)/2*255;
                                         b = (n.z() + 1)/2*255;
+                                        if (ui->showPointsGrid->isChecked()){
 
-                                        //painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
-                                        painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
+                                            //painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
+                                            painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
+                                        }
 
                                         ///Tem que dar uma altura para esses pontos, eu tô chutando o z da normal, mas nao sei se serve.
                                         //p.setZ(n.z());
@@ -2041,7 +2058,9 @@ void MainWindow::gerarbf(QPainter *painter){
                             knownNormals.push_back(vetornormal);
 
                             painter->drawPath(contorno1);
-                            painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                            if (ui->showPointsContour->isChecked()){
+                                painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                            }
 
 
 
@@ -2165,8 +2184,9 @@ void MainWindow::gerarbf(QPainter *painter){
                             painter->setPen(QPen(QColor(255,127,0), 3, Qt::DashDotLine));
 
                             // painter->drawPath(contorno2);
-
-                            painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
+                            if (ui->showPointsContour->isChecked()){
+                                painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
+                            }
                         }
 
                         //------------------------------------------------------
@@ -2595,8 +2615,9 @@ void MainWindow::gerarbf(QPainter *painter){
                     int b = ponto.z()*10;
 
                     painter->drawPath(contorno1);
+                    if (ui->showPointsContour->isChecked()){
                     painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*10,ponto.y() + vetornormal.y()*10);
-
+                    }
                 }
 
 
@@ -2669,7 +2690,9 @@ void MainWindow::gerarbf(QPainter *painter){
                     vetornormal.setY(angleline.y2()-angleline.y1());
                     vetornormal.setZ(0);
 
+                    if (ui->showPointsContour->isChecked()){
                     painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*10,p.y() + vetornormal.y()*10);
+                    }
 
 
                     knownPoints.push_back(p);
