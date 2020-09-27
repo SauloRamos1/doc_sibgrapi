@@ -14,6 +14,8 @@
 
 #include <QListWidget>
 
+#include <QInputDialog>
+
 #include <halfedge.h>
 
 
@@ -26,7 +28,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 protected:
-    void paintEvent(QPaintEvent *e);
+    void paintEvent(QPaintEvent *e) override;
 
 public:
     explicit MainWindow(QWidget *parent = 0);
@@ -63,6 +65,7 @@ public:
     int ncurvas = 0;
 
     bool gerarbfButtonClicked = false;
+    bool rbfGenerated = false;
 
     QVector<QVector<float>> listadecurvas;
     QVector<HalfEdge*> listadeciclos;
@@ -80,7 +83,24 @@ public:
 
     QPolygonF criapoligono (HalfEdge* half);
 
-    void gerarbf(QPainter *painter);
+    void gerarbf();
+
+    //Lists For Painting Lines and Points
+
+    QList<QLine> listOfNormalsOnContours;
+    QList<QPen> listOfPenNormalsOnContours;
+
+    QList<QRectF> listOfBoundingBoxes;
+    QList<QPen> listOfPenBoundingBoxes;
+
+    QList<QPointF> listOfPointsOnGrid;
+    QList<QPen> listOfPenPointsOnGrid;
+
+    QList<QPointF> listOfHigherPoints;
+    QList<QPen> listOfPenHigherPoints;
+
+    QList<QPainterPath> listOfExtraPaths;
+    QList<QPen> listOfPenExtraPaths;
 
 private:
     Ui::MainWindow *ui;
@@ -107,3 +127,4 @@ private slots:
 };
 
 #endif // MAINWINDOW_H
+

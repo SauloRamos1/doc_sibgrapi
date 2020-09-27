@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1427</width>
-    <height>709</height>
+    <width>1751</width>
+    <height>843</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>1290</x>
-      <y>620</y>
+      <x>1610</x>
+      <y>610</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>1030</x>
-      <y>20</y>
+      <x>1350</x>
+      <y>10</y>
       <width>381</width>
       <height>192</height>
      </rect>
@@ -40,8 +40,8 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>1030</x>
-      <y>440</y>
+      <x>1350</x>
+      <y>430</y>
       <width>391</width>
       <height>131</height>
      </rect>
@@ -149,8 +149,8 @@
    <widget class="QCheckBox" name="showPointsGrid">
     <property name="geometry">
      <rect>
-      <x>1040</x>
-      <y>590</y>
+      <x>1360</x>
+      <y>580</y>
       <width>171</width>
       <height>19</height>
      </rect>
@@ -165,8 +165,8 @@
    <widget class="QCheckBox" name="showPointsContour">
     <property name="geometry">
      <rect>
-      <x>1040</x>
-      <y>620</y>
+      <x>1360</x>
+      <y>610</y>
       <width>181</width>
       <height>19</height>
      </rect>
@@ -181,8 +181,8 @@
    <widget class="QCheckBox" name="showBoundingBox">
     <property name="geometry">
      <rect>
-      <x>1040</x>
-      <y>650</y>
+      <x>1360</x>
+      <y>640</y>
       <width>181</width>
       <height>19</height>
      </rect>
@@ -197,8 +197,8 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>1030</x>
-      <y>240</y>
+      <x>1350</x>
+      <y>230</y>
       <width>391</width>
       <height>181</height>
      </rect>
@@ -614,8 +614,8 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>1290</x>
-      <y>650</y>
+      <x>1610</x>
+      <y>640</y>
       <width>75</width>
       <height>23</height>
      </rect>

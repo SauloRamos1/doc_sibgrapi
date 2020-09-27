@@ -50,8 +50,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->gridsamplingvalue->setText(QString ("%1").arg(gridsamplingvalue));
 
     // Ajuste Border Cycles
-    lshapesvalue = ui->slider_lshapes->value();
-    ui->label_lshapes->setText(QString ("%1").arg(1/lshapesvalue));
+    //lshapesvalue = ui->slider_lshapes->value();
+    //ui->label_lshapes->setText(QString ("%1").arg(1/lshapesvalue));
 
     // Ajuste Membros Simétricos
     lsym = ui->slider_lsym->value();
@@ -133,7 +133,7 @@ void MainWindow::paintEvent(QPaintEvent *e){
                 font.setPointSize ( 18 );
                 painter.setFont(font);
                 //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
-                painter.drawText(boundingbox.topRight(), id_cycle);
+                painter.drawText(boundingbox.center(), id_cycle);
             }
 
             //Pinta Island
@@ -154,7 +154,7 @@ void MainWindow::paintEvent(QPaintEvent *e){
                 font.setPointSize ( 18 );
                 painter.setFont(font);
                 //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
-                painter.drawText(boundingbox.topRight(), id_cycle);
+                painter.drawText(boundingbox.center(), id_cycle);
             }
 
             //Pinta Adjacents
@@ -175,7 +175,7 @@ void MainWindow::paintEvent(QPaintEvent *e){
                 font.setPointSize ( 18 );
                 painter.setFont(font);
                 //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
-                painter.drawText(boundingbox.topRight(), id_cycle);
+                painter.drawText(boundingbox.center(), id_cycle);
             }
 
             //Pinta Features
@@ -197,7 +197,7 @@ void MainWindow::paintEvent(QPaintEvent *e){
                 font.setPointSize ( 18 );
                 painter.setFont(font);
                 //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
-                painter.drawText(boundingbox.topRight(), id_cycle);
+                painter.drawText(boundingbox.center(), id_cycle);
             }
 
             //Pinta Others
@@ -226,7 +226,7 @@ void MainWindow::paintEvent(QPaintEvent *e){
                 font.setPointSize ( 18 );
                 painter.setFont(font);
                 //painter.setPen(QPen(QColor(Qt::black), 3, Qt::DashDotLine));
-                painter.drawText(boundingbox.topRight(), id_cycle);
+                painter.drawText(boundingbox.center(), id_cycle);
             }
 
             //Pinta Simétricos em Background
@@ -238,12 +238,42 @@ void MainWindow::paintEvent(QPaintEvent *e){
 
         }
 
-        if (gerarbfButtonClicked == true){
-            gerarbf(&painter);
+        if (ui->showPointsContour->isChecked()){
+
+            for (int i = 0; i < listOfNormalsOnContours.size(); ++i) {
+                painter.setPen(listOfPenNormalsOnContours[i]);
+                painter.drawLine(listOfNormalsOnContours[i]);
+            }
         }
 
+        if (ui->showBoundingBox->isChecked()){
+
+            for (int i = 0; i < listOfBoundingBoxes.size(); ++i) {
+                painter.setPen(listOfPenBoundingBoxes[i]);
+                painter.drawRect(listOfBoundingBoxes[i]);
+            }
+        }
+
+        if (ui->showPointsGrid->isChecked()){
+
+            for (int i = 0; i < listOfPointsOnGrid.size(); ++i) {
+                painter.setPen(listOfPenPointsOnGrid[i]);
+                painter.drawPoint(listOfPointsOnGrid[i]);
+            }
+            for (int i = 0; i < listOfHigherPoints.size(); ++i) {
+                painter.setPen(listOfPenHigherPoints[i]);
+                painter.drawPoint(listOfHigherPoints[i]);
+            }
+        }
+
+        for (int i = 0; i < listOfExtraPaths.size(); ++i) {
+            painter.setPen(listOfPenExtraPaths[i]);
+            painter.drawPath(listOfExtraPaths[i]);
+        }
+
+
     }
-    gerarbfButtonClicked = false;
+
 
 }
 
@@ -385,6 +415,7 @@ void MainWindow::on_pushButton_released()
     imagemcarregada = true;
 
     classificaciclos();
+
 
     this->update();
 
@@ -1012,7 +1043,7 @@ void MainWindow::classificaciclos(){
 /// 7 - Membro Simétrico
 ///
 ///
-void MainWindow::gerarbf(QPainter *painter){
+void MainWindow::gerarbf(){
 
     //        \definecolor{outer}{RGB}{251,154,153}
     //        \definecolor{border}{RGB}{55,126,184}
@@ -1023,25 +1054,36 @@ void MainWindow::gerarbf(QPainter *painter){
 
     for (int i = 0 ; i < listadeciclos.size() ; i++){
 
+        QPen pen;
+        QPen penHigherPoint;
+        penHigherPoint = QPen(QColor(Qt::red), 3, Qt::SolidLine);
         switch (listadeciclos[i]->cycle) {
 
         case 2:
-            painter->setPen(QPen(QColor(55,126,184), 3, Qt::SolidLine));
+
+            pen = QPen(QColor(55,126,184), 3, Qt::SolidLine);
+            //painter->setPen(QPen(QColor(55,126,184), 3, Qt::SolidLine));
             break;
         case 3:
-            painter->setPen(QPen(QColor(77,175,74), 3, Qt::SolidLine));
+            pen = QPen(QColor(77,175,74), 3, Qt::SolidLine);
+            //painter->setPen(QPen(QColor(77,175,74), 3, Qt::SolidLine));
             break;
         case 4:
-            painter->setPen(QPen(QColor(152,78,163), 3, Qt::SolidLine));
+            pen = QPen(QColor(152,78,163), 3, Qt::SolidLine);
+            //painter->setPen(QPen(QColor(152,78,163), 3, Qt::SolidLine));
             break;
         case 5:
-            painter->setPen(QPen(QColor(255,127,0), 3, Qt::SolidLine));
+            pen = QPen(QColor(255,127,0), 3, Qt::SolidLine);
+            //painter->setPen(QPen(QColor(255,127,0), 3, Qt::SolidLine));
             break;
         case 7:
-            painter->setPen(QPen(QColor(255,0,0), 3, Qt::SolidLine));
+            pen = QPen(QColor(255,0,0), 3, Qt::SolidLine);
+            //painter->setPen(QPen(QColor(255,0,0), 3, Qt::SolidLine));
             break;
 
         }
+
+
 
         std::vector<QVector3D>knownPoints;
         std::vector<QVector3D>knownNormals;
@@ -1052,7 +1094,12 @@ void MainWindow::gerarbf(QPainter *painter){
 
         // Amostra Pontos e Normais no contorno do Border Cycle;
         if (listadeciclos[i]->cycle == 2){
+
+
             QPainterPath border;
+
+            qDebug () << listadeciclos.size();
+
 
             border = criapath(listadeciclos[i]) ;
             for (float var = border.length(); var > 0 ; var = var - contoursamplingvalue){
@@ -1079,10 +1126,15 @@ void MainWindow::gerarbf(QPainter *painter){
 
                 knownNormals.push_back(vetornormal);
 
-                if (ui->showPointsContour->isChecked()){
+                QLine normalLine (ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
 
-                    painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
-                }
+                listOfNormalsOnContours.push_back(normalLine);
+                listOfPenNormalsOnContours.push_back(pen);
+
+                //if (ui->showPointsContour->isChecked()){
+
+                //    painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                //}
 
             }
 
@@ -1101,10 +1153,10 @@ void MainWindow::gerarbf(QPainter *painter){
             outFile.append(std::to_string(i));
             outFile.append(".data");
 
-            QFont font = painter->font() ;
-            font.setPointSize ( 18 );
+            //QFont font = painter->font() ;
+            //font.setPointSize ( 18 );
             //font.setWeight(QFont::DemiBold);
-            painter->setFont(font);
+            //painter->setFont(font);
 
             QString s = QString::number(i);
 
@@ -1120,6 +1172,10 @@ void MainWindow::gerarbf(QPainter *painter){
             ///
             ///
             ///
+
+            //qDebug () << "Passou";
+
+            lshapesvalue = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),tr("Amount:"), 0.1, -10000, 10000, 3);
 
             //////////PREENCHER OS VETORES KNOWNPOINTS & KNOWNNORMALS
 
@@ -1146,9 +1202,12 @@ void MainWindow::gerarbf(QPainter *painter){
             // qDebug () << xmax-xmin;
             // qDebug () << ymax-ymin;
 
-            if (ui->showBoundingBox->isChecked()){
-                painter->drawRect(boundingbox);
-            }
+            listOfBoundingBoxes.push_back(boundingbox);
+            listOfPenBoundingBoxes.push_back(pen);
+
+            //if (ui->showBoundingBox->isChecked()){
+            //    painter->drawRect(boundingbox);
+            //}
 
 
             //float spacing = (xmax - xmin) /10;  //5.0;///Espacamento do grid
@@ -1194,6 +1253,7 @@ void MainWindow::gerarbf(QPainter *painter){
                             g = (abs(n.y()) + 1)/2*255;
                             b = (n.z() + 1)/2*255;
 
+
                             //painter->setPen(QPen(QColor(r,g,b), 5, Qt::SolidLine));
                             //painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
 
@@ -1202,9 +1262,13 @@ void MainWindow::gerarbf(QPainter *painter){
                             //painter->setPen(QPen(QColor(51, 153, 255), 4, Qt::SolidLine));
                             //painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
                             //painter->drawPoint(ponto.x(),ponto.y());
-                            if (ui->showPointsGrid->isChecked()){
-                                painter->drawRoundRect(ponto.x(),ponto.y(),2,2);
-                            }
+
+                            //if (ui->showPointsGrid->isChecked()){
+                            //    painter->drawRoundRect(ponto.x(),ponto.y(),2,2);
+                            //}
+
+                            listOfPointsOnGrid.push_back(ponto);
+                            listOfPenPointsOnGrid.push_back(pen);
 
                             // painter->drawEllipse(ponto.x(),ponto.y(),1,1);
 
@@ -1340,16 +1404,20 @@ void MainWindow::gerarbf(QPainter *painter){
                             vetornormal.setY(angleline.y2()-angleline.y1());
 
                             knownNormals.push_back(vetornormal);
-                            if (ui->showPointsContour->isChecked()){
-                                painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
-                            }
+                            QLine normalLine (ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+
+                            listOfNormalsOnContours.push_back(normalLine);
+                            listOfPenNormalsOnContours.push_back(pen);
+                            //if (ui->showPointsContour->isChecked()){
+                            //    painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                            //}
                         }
 
 
-                        QFont font = painter->font() ;
-                        font.setPointSize ( 18 );
+                        //    QFont font = painter->font() ;
+                        // font.setPointSize ( 18 );
                         //font.setWeight(QFont::DemiBold);
-                        painter->setFont(font);
+                        //painter->setFont(font);
 
                         QString s = QString::number(i);
 
@@ -1380,10 +1448,12 @@ void MainWindow::gerarbf(QPainter *painter){
                         float hz;  // Altura do membro simétrico em relação ao corpo
                         float hb; // Altura do ponto da normal mais alta no corpo
                         float hl;  // Altura do ponto da normal mais alta no membro simétrico
+                        listOfBoundingBoxes.push_back(boundingbox);
+                        listOfPenBoundingBoxes.push_back(pen);
 
-                        if (ui->showBoundingBox->isChecked()){
-                            painter->drawRect(boundingbox);
-                        }
+                        //                        if (ui->showBoundingBox->isChecked()){
+                        //                            painter->drawRect(boundingbox);
+                        //                        }
                         QVector3D pontomaisalto(0,0,0);
                         QVector3D normaldopontomaisalto (0,0,0);
 
@@ -1454,10 +1524,13 @@ void MainWindow::gerarbf(QPainter *painter){
                                         int g = (abs(n.y()) + 1)/2*255;
                                         int b = (n.z() + 1)/2*255;
 
-                                        if (ui->showPointsGrid->isChecked()){
-                                            painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
-                                            painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
-                                        }
+                                        //if (ui->showPointsGrid->isChecked()){
+                                        //  painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
+                                        //painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
+                                        //}
+
+                                        listOfPointsOnGrid.push_back(ponto);
+                                        listOfPenPointsOnGrid.push_back(pen);
 
                                         ///Tem que dar uma altura para esses pontos, eu tô chutando o z da normal, mas nao sei se serve.
                                         //p.setZ(n.z());
@@ -1521,9 +1594,11 @@ void MainWindow::gerarbf(QPainter *painter){
 
 
                         //painter->setPen(QPen(Qt::black, 7, Qt::SolidLine));
-                        painter->drawEllipse(pontomaisalto.x(), pontomaisalto.y(),20,20);
+                        //painter->drawEllipse(pontomaisalto.x(), pontomaisalto.y(),20,20);
                         qDebug () << pontomaisalto;
 
+                        listOfHigherPoints.push_back(pontomaisalto.toPointF());
+                        listOfPenHigherPoints.push_back(penHigherPoint);
 
 
                         //std::string outFile = "rbf.data";
@@ -1694,16 +1769,19 @@ void MainWindow::gerarbf(QPainter *painter){
                             vetornormal.setY(angleline.y2()-angleline.y1());
 
                             knownNormals.push_back(vetornormal);
-                            if (ui->showPointsContour->isChecked()){
-                                painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*1,ponto.y() + vetornormal.y()*1);
-                            }
+
+                            QLine normalLine (ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+
+                            listOfNormalsOnContours.push_back(normalLine);
+                            listOfPenNormalsOnContours.push_back(pen);
+
                         }
 
 
-                        QFont font = painter->font() ;
-                        font.setPointSize ( 18 );
+                        //QFont font = painter->font() ;
+                        //font.setPointSize ( 18 );
                         //font.setWeight(QFont::DemiBold);
-                        painter->setFont(font);
+                        //painter->setFont(font);
 
                         QString s = QString::number(i);
 
@@ -1731,13 +1809,15 @@ void MainWindow::gerarbf(QPainter *painter){
 
                         // NOVO IGUAL AO ARTIGO E QUALI
                         // Hz = Hb - Hl
+                        // Simplificando = Hz * border * lambda
+
                         float hz;  // Altura do membro simétrico em relação ao corpo
                         float hb; // Altura do ponto da normal mais alta no corpo
                         float hl;  // Altura do ponto da normal mais alta no membro simétrico
 
-                        if (ui->showBoundingBox->isChecked()){
-                            painter->drawRect(boundingbox);
-                        }
+
+                        listOfBoundingBoxes.push_back(boundingbox);
+                        listOfPenBoundingBoxes.push_back(pen);
 
                         QVector3D pontomaisalto(0,0,0);
                         QVector3D normaldopontomaisalto (0,0,0);
@@ -1802,11 +1882,9 @@ void MainWindow::gerarbf(QPainter *painter){
                                         r = (abs(n.x()) + 1)/2*255;
                                         g = (abs(n.y()) + 1)/2*255;
                                         b = (n.z() + 1)/2*255;
-                                        if (ui->showPointsGrid->isChecked()){
 
-                                            //painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
-                                            painter->drawLine(ponto.x(), ponto.y(), ponto.x(), ponto.y());
-                                        }
+                                        listOfPointsOnGrid.push_back(ponto);
+                                        listOfPenPointsOnGrid.push_back(pen);
 
                                         ///Tem que dar uma altura para esses pontos, eu tô chutando o z da normal, mas nao sei se serve.
                                         //p.setZ(n.z());
@@ -1870,7 +1948,10 @@ void MainWindow::gerarbf(QPainter *painter){
 
 
                         //painter->setPen(QPen(Qt::black, 7, Qt::SolidLine));
-                        painter->drawEllipse(pontomaisalto.x(), pontomaisalto.y(),20,20);
+                        listOfHigherPoints.push_back(pontomaisalto.toPointF());
+                        listOfPenHigherPoints.push_back(penHigherPoint);
+
+
                         qDebug () << pontomaisalto;
 
 
@@ -1989,7 +2070,10 @@ void MainWindow::gerarbf(QPainter *painter){
                             half1 = half1->next;
                         }
 
-                        painter->drawEllipse(half1->p3,2,2);
+                        listOfPointsOnGrid.push_back(half1->p3);
+                        listOfPenPointsOnGrid.push_back(pen);
+
+                        //painter->drawEllipse(half1->p3,2,2);
 
                         HalfEdge* half2 = half1->next;
 
@@ -1998,7 +2082,10 @@ void MainWindow::gerarbf(QPainter *painter){
                             half2 = half2->next;
                         }
 
-                        painter->drawEllipse(half2->p3,2,2);
+                        //painter->drawEllipse(half2->p3,2,2);
+
+                        listOfPointsOnGrid.push_back(half2->p3);
+                        listOfPenPointsOnGrid.push_back(pen);
 
                         QPainterPath contorno1;
 
@@ -2057,10 +2144,18 @@ void MainWindow::gerarbf(QPainter *painter){
 
                             knownNormals.push_back(vetornormal);
 
-                            painter->drawPath(contorno1);
-                            if (ui->showPointsContour->isChecked()){
-                                painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
-                            }
+                            listOfExtraPaths.push_back(contorno1);
+                            listOfPenExtraPaths.push_back(pen);
+
+                            QLine normalLine (ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+
+                            listOfNormalsOnContours.push_back(normalLine);
+                            listOfPenNormalsOnContours.push_back(pen);
+
+                            //painter->drawPath(contorno1);
+                            //if (ui->showPointsContour->isChecked()){
+                            //painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+                            //}
 
 
 
@@ -2081,7 +2176,10 @@ void MainWindow::gerarbf(QPainter *painter){
                             half3 = half3->next;
                         }
 
-                        painter->drawEllipse(half3->p3,2,2);
+                        listOfPointsOnGrid.push_back(half3->p3);
+                        listOfPenPointsOnGrid.push_back(pen);
+
+                        //painter->drawEllipse(half3->p3,2,2);
 
                         HalfEdge* half4 = half3->next;
 
@@ -2089,8 +2187,9 @@ void MainWindow::gerarbf(QPainter *painter){
 
                             half4 = half4->next;
                         }
-
-                        painter->drawEllipse(half2->p3,2,2);
+                        listOfPointsOnGrid.push_back(half2->p3);
+                        listOfPenPointsOnGrid.push_back(pen);
+                        //painter->drawEllipse(half2->p3,2,2);
 
                         QPainterPath contorno2;
 
@@ -2179,14 +2278,18 @@ void MainWindow::gerarbf(QPainter *painter){
                             int g = 0;
                             int b = p.z()*15;
 
+                            QLine normalLine (p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
+                            pen = QPen(QColor(255,127,0), 3, Qt::DashDotLine);
+                            listOfNormalsOnContours.push_back(normalLine);
+                            listOfPenNormalsOnContours.push_back(pen);
 
                             // painter->setPen(QPen(QColor(50,50,50), 2, Qt::SolidLine));
-                            painter->setPen(QPen(QColor(255,127,0), 3, Qt::DashDotLine));
+                            //painter->setPen(QPen(QColor(255,127,0), 3, Qt::DashDotLine));
 
                             // painter->drawPath(contorno2);
-                            if (ui->showPointsContour->isChecked()){
-                                painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
-                            }
+                            //if (ui->showPointsContour->isChecked()){
+                            //                                painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
+                            //                          }
                         }
 
                         //------------------------------------------------------
@@ -2234,8 +2337,12 @@ void MainWindow::gerarbf(QPainter *painter){
                             linhaquefechaadjacente.cubicTo(he0->p1.x(),he0->p1.y(),he0->p2.x(),he0->p2.y(),he0->p3.x(),he0->p3.y());
                         }
 
-                        painter->setPen(QPen(QColor(50, 50, 50), 4, Qt::DashLine));
-                        painter->drawPath(linhaquefechaadjacente);
+                        pen = QPen(QColor(50, 50, 50), 4, Qt::DashLine);
+                        listOfExtraPaths.push_back(linhaquefechaadjacente);
+                        listOfPenExtraPaths.push_back(pen);
+
+                        //painter->setPen(QPen(QColor(50, 50, 50), 4, Qt::DashLine));
+                        //painter->drawPath(linhaquefechaadjacente);
 
                         for (float var = linhaquefechaadjacente.length(); var >0; var = var - contoursamplingvalue){
 
@@ -2262,7 +2369,12 @@ void MainWindow::gerarbf(QPainter *painter){
                             vetornormal.setY(angleline.y2()-angleline.y1());
                             //vetornormal.setZ(n.z());
 
-                            painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
+                            QLine normalLine (p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
+
+                            listOfNormalsOnContours.push_back(normalLine);
+                            listOfPenNormalsOnContours.push_back(pen);
+
+                            //  painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
 
 
                             knownPoints.push_back(p);
@@ -2335,8 +2447,12 @@ void MainWindow::gerarbf(QPainter *painter){
                                         g = (abs(n.y()) + 1)/2*255;
                                         b = (n.z() + 1)/2*255;
 
-                                        painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
-                                        painter->drawLine(p.x(), p.y(), p.x(), p.y());
+                                        pen = QPen(QColor(r,g,b), 1, Qt::SolidLine);
+                                        listOfPointsOnGrid.push_back(p.toPointF());
+                                        listOfPenPointsOnGrid.push_back(pen);
+
+                                        //                                        painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
+                                        //                                        painter->drawLine(p.x(), p.y(), p.x(), p.y());
 
                                         totalPoints.push_back(p);
                                         p.setZ(p.z()*-1);
@@ -2543,8 +2659,9 @@ void MainWindow::gerarbf(QPainter *painter){
 
                     half1 = half1->next;
                 }
-
-                painter->drawEllipse(half1->p3,4,4);
+                listOfPointsOnGrid.push_back(half1->p3);
+                listOfPenPointsOnGrid.push_back(pen);
+                //painter->drawEllipse(half1->p3,4,4);
 
                 HalfEdge* half2 = half1->next;
 
@@ -2552,8 +2669,9 @@ void MainWindow::gerarbf(QPainter *painter){
 
                     half2 = half2->next;
                 }
-
-                painter->drawEllipse(half2->p3,4,4);
+                listOfPointsOnGrid.push_back(half2->p3);
+                listOfPenPointsOnGrid.push_back(pen);
+                //painter->drawEllipse(half2->p3,4,4);
 
                 QPainterPath contorno1;
 
@@ -2613,11 +2731,18 @@ void MainWindow::gerarbf(QPainter *painter){
                     int r = 0;
                     int g = 0;
                     int b = ponto.z()*10;
+                    listOfExtraPaths.push_back(contorno1);
+                    listOfPenExtraPaths.push_back(pen);
 
-                    painter->drawPath(contorno1);
-                    if (ui->showPointsContour->isChecked()){
-                    painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*10,ponto.y() + vetornormal.y()*10);
-                    }
+                    QLine normalLine (ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*5,ponto.y() + vetornormal.y()*5);
+
+                    listOfNormalsOnContours.push_back(normalLine);
+                    listOfPenNormalsOnContours.push_back(pen);
+
+                    //painter->drawPath(contorno1);
+                    //if (ui->showPointsContour->isChecked()){
+                    //    painter->drawLine(ponto.x(), ponto.y(),ponto.x() + vetornormal.x()*10,ponto.y() + vetornormal.y()*10);
+                    //}
                 }
 
 
@@ -2660,15 +2785,17 @@ void MainWindow::gerarbf(QPainter *painter){
                     linhaquefechaadjacente.cubicTo(he0->p1.x(),he0->p1.y(),he0->p2.x(),he0->p2.y(),he0->p3.x(),he0->p3.y());
                 }
 
-                painter->drawPath(linhaquefechaadjacente);
-
+                //painter->drawPath(linhaquefechaadjacente);
+                listOfExtraPaths.push_back(linhaquefechaadjacente);
+                listOfPenExtraPaths.push_back(pen);
 
 
 
 
                 for (float var = linhaquefechaadjacente.length(); var >0; var = var - contoursamplingvalue){
 
-                    painter->drawPath(linhaquefechaadjacente);
+                    //painter->drawPath(linhaquefechaadjacente);
+
                     float percent = var / linhaquefechaadjacente.length();
 
 
@@ -2690,9 +2817,14 @@ void MainWindow::gerarbf(QPainter *painter){
                     vetornormal.setY(angleline.y2()-angleline.y1());
                     vetornormal.setZ(0);
 
-                    if (ui->showPointsContour->isChecked()){
-                    painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*10,p.y() + vetornormal.y()*10);
-                    }
+                    QLine normalLine (p.x(), p.y(),p.x() + vetornormal.x()*5,p.y() + vetornormal.y()*5);
+
+                               listOfNormalsOnContours.push_back(normalLine);
+                               listOfPenNormalsOnContours.push_back(pen);
+
+                   // if (ui->showPointsContour->isChecked()){
+                   //     painter->drawLine(p.x(), p.y(),p.x() + vetornormal.x()*10,p.y() + vetornormal.y()*10);
+                   // }
 
 
                     knownPoints.push_back(p);
@@ -2854,8 +2986,12 @@ void MainWindow::gerarbf(QPainter *painter){
                                 g = (abs(n.y()) + 1)/2*255;
                                 b = (n.z() + 1)/2*255;
 
-                                painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
-                                painter->drawLine(p.x(), p.y(), p.x(), p.y());
+                                //painter->setPen(QPen(QColor(r,g,b), 1, Qt::SolidLine));
+                                //painter->drawLine(p.x(), p.y(), p.x(), p.y());
+                                pen = QPen(QColor(r,g,b), 1, Qt::SolidLine);
+                                listOfPointsOnGrid.push_back(p.toPointF());
+                                listOfPenPointsOnGrid.push_back(pen);
+
 
                                 totalPoints.push_back(p);
                                 p.setZ(p.z()*-1);
@@ -2970,6 +3106,8 @@ void MainWindow::gerarbf(QPainter *painter){
 
 
     }
+
+    rbfGenerated = true;
 }
 
 
@@ -3048,10 +3186,8 @@ void MainWindow::on_gridsampling_sliderMoved(int position)
 }
 
 
-
-
 void MainWindow::on_pushButton_2_clicked()
 {
-    gerarbfButtonClicked = true;
+    gerarbf();
     update();
 }
