@@ -54,29 +54,29 @@ MainWindow::MainWindow(QWidget *parent) :
     //ui->label_lshapes->setText(QString ("%1").arg(1/lshapesvalue));
 
     // Ajuste Membros Simétricos
-    lsym = ui->slider_lsym->value();
-    ui->label_lsym->setText(QString ("%1").arg(1/lsym));
+    //lsym = ui->slider_lsym->value();
+    //ui->label_lsym->setText(QString ("%1").arg(1/lsym));
 
-    ldepthsym = ui->slider_ldepthsym->value();
-    ui->label_ldepthsym->setText(QString ("%1").arg(1/ldepthsym));
+    //ldepthsym = ui->slider_ldepthsym->value();
+    //ui->label_ldepthsym->setText(QString ("%1").arg(1/ldepthsym));
 
     // Ajuste Island
-    lisland = ui->slider_lisland->value();
-    ui->label_lisland->setText(QString ("%1").arg(1/lisland));
+    //lisland = ui->slider_lisland->value();
+    //ui->label_lisland->setText(QString ("%1").arg(1/lisland));
 
-    ldepthisland = ui->slider_ldepthisland->value();
-    ui->label_ldepthisland->setText(QString ("%1").arg(1/ldepthisland));
+    //ldepthisland = ui->slider_ldepthisland->value();
+    //ui->label_ldepthisland->setText(QString ("%1").arg(1/ldepthisland));
 
     // Ajuste Adjacent
 
-    ladj = ui->slider_ladj->value();
-    ui->label_ladj->setText(QString ("%1").arg(1/ladj));
+    //ladj = ui->slider_ladj->value();
+    //ui->label_ladj->setText(QString ("%1").arg(1/ladj));
 
-    adjnewcontour = ui->slider_adjnewcontour->value();
-    ui->label_adjnewcontour->setText(QString ("%1").arg(adjnewcontour));
+    //adjnewcontour = ui->slider_adjnewcontour->value();
+    //ui->label_adjnewcontour->setText(QString ("%1").arg(adjnewcontour));
 
-    ldepthadj = ui->slider_ldepthadj->value();
-    ui->label_ldepthadj->setText(QString ("%1").arg(1/ldepthadj));
+    //ldepthadj = ui->slider_ldepthadj->value();
+    //ui->label_ldepthadj->setText(QString ("%1").arg(1/ldepthadj));
 
 
 
@@ -1096,6 +1096,15 @@ void MainWindow::gerarbf(){
         if (listadeciclos[i]->cycle == 2){
 
 
+            QString id_cycle;
+            id_cycle.append("ID");
+            id_cycle.append(QString::number(listadeciclos[i]->cycle));
+            id_cycle.append("_Ciclo");
+            id_cycle.append(QString::number(i));
+
+            lshapesvalue = QInputDialog::getDouble(this, id_cycle,tr("Default: 0.1 - Lambda Border Cycle"), 0.1, -10000, 10000, 3);
+
+
             QPainterPath border;
 
             qDebug () << listadeciclos.size();
@@ -1174,8 +1183,6 @@ void MainWindow::gerarbf(){
             ///
 
             //qDebug () << "Passou";
-
-            lshapesvalue = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),tr("Amount:"), 0.1, -10000, 10000, 3);
 
             //////////PREENCHER OS VETORES KNOWNPOINTS & KNOWNNORMALS
 
@@ -1327,9 +1334,18 @@ void MainWindow::gerarbf(){
 
         if (listadeciclos[i]->cycle == 3){ // Se for Island (3)
 
+            QString id_cycle;
+            id_cycle.append("ID");
+            id_cycle.append(QString::number(listadeciclos[i]->cycle));
+            id_cycle.append("_Ciclo");
+            id_cycle.append(QString::number(i));
+            lisland = QInputDialog::getDouble(this, id_cycle,tr("Default: 0.1 - Lambda Island Cycle"), 0.1, -10000, 10000, 3);
+            ldepthisland = QInputDialog::getDouble(this, id_cycle,tr("Default: 0.1 - Lambda Depth Island Cycle"), 0.1, -10000, 10000, 3);
+
             for (int j = 0 ; j < listadeciclos.size() ; j++){
 
                 if (listadeciclos[j]->cycle == 2){
+
 
 
                     QPainterPath border = criapath(listadeciclos[j]) ;
@@ -1473,6 +1489,8 @@ void MainWindow::gerarbf(){
 
                         /// Neste caso o grid sampling tem que ficar dentro dos corpos.. para corpos muito pequenos um valor padrão não funciona; por ex: 20
                         /// Tem que ser ajustado pro corpo
+                        ///
+
 
 
                         //float spacing = boundingbox.width()/gridsamplingvalue;
@@ -1693,6 +1711,15 @@ void MainWindow::gerarbf(){
         }
 
         if (listadeciclos[i]->cycle == 7){ // Se for um membro simétrico (7)
+
+            QString id_cycle;
+            id_cycle.append("ID");
+            id_cycle.append(QString::number(listadeciclos[i]->cycle));
+            id_cycle.append("_Ciclo");
+            id_cycle.append(QString::number(i));
+            lsym = QInputDialog::getDouble(this, id_cycle,tr("Default: 0.1 - Lambda Symmetrical Cycle"), 0.1, -10000, 10000, 3);
+            ldepthsym = QInputDialog::getDouble(this, id_cycle,tr("Default: 0.1 - Lambda Depth Symmetrical Cycle"), 0.1, -10000, 10000, 3);
+
 
             for (int j = 0 ; j < listadeciclos.size() ; j++){
 
@@ -2047,6 +2074,18 @@ void MainWindow::gerarbf(){
         }
 
         if (listadeciclos[i]->cycle == 4){ // Se for um Adjacent
+
+            QString id_cycle;
+            id_cycle.append("ID");
+            id_cycle.append(QString::number(listadeciclos[i]->cycle));
+            id_cycle.append("_Ciclo");
+            id_cycle.append(QString::number(i));
+            ladj = QInputDialog::getDouble(this, id_cycle,tr("Default: 0.1 - Lambda Adjacent Cycle"), 0.1, -10000, 10000, 3);
+            adjnewcontour = QInputDialog::getDouble(this, id_cycle,tr("Default: 0.25 - Lambda Adjacent Points Cycle"), 0.1, -10000, 10000, 3);
+            ldepthadj = QInputDialog::getDouble(this, id_cycle,tr("Default: 0.1 - Lambda Depth Adjacent Cycle"), 0.1, -10000, 10000, 3);
+
+
+
             bool temfeature = false;
             for (int j = 0; j< listadeciclos.size() ; j++){ //Pesquisa se tem um feature
 
