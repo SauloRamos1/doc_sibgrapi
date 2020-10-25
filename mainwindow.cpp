@@ -1285,12 +1285,12 @@ void MainWindow::gerarbf(){
                             ///calculou para um ponto no grid a norma dele. agora coloca no vetor final.
                             //p.setZ(1);
 
-                            p.setZ(n.z()*(boundingbox.width()/lshapesvalue));
+                            p.setZ(n.z()*(boundingbox.width()*lshapesvalue));
                             totalPoints.push_back(p);
                             totalNormals.push_back(n);
                             //qDebug () << p;
                             //qDebug () << "Z+ .. " << "Ponto: " <<p << "Normal: "<< n;
-                            p.setZ(n.z()*(-boundingbox.width()/lshapesvalue));
+                            p.setZ(n.z()*(-boundingbox.width()*lshapesvalue));
                             totalPoints.push_back(p);
                             //qDebug () << p;
                             n.setZ(n.z()*-1);
@@ -1556,10 +1556,10 @@ void MainWindow::gerarbf(){
                                         ///calculou para um ponto no grid a norma dele. agora coloca no vetor final.
                                         //p.setZ(1);
 
-                                        p.setZ(n.z()*(boundingbox.width()/lisland));
+                                        p.setZ(n.z()*(boundingbox.width()*lisland));
                                         totalPoints.push_back(p);
                                         totalNormals.push_back(n);
-                                        p.setZ(n.z()*(-boundingbox.width()/lisland));
+                                        p.setZ(n.z()*(-boundingbox.width()*lisland));
                                         totalPoints.push_back(p);
                                         n.setZ(n.z()*-1);
                                         totalNormals.push_back(n);
@@ -1569,7 +1569,7 @@ void MainWindow::gerarbf(){
                                         normaldopontomaisalto.setZ(n.z());
                                         pontomaisalto.setX(p.x());
                                         pontomaisalto.setY(p.y());
-                                        hl = normaldopontomaisalto.z()*(island.boundingRect().width()/lshapesvalue);
+                                        hl = normaldopontomaisalto.z()*(island.boundingRect().width()*lshapesvalue);
                                     }
                                 }
                             }
@@ -1600,8 +1600,8 @@ void MainWindow::gerarbf(){
 
                         n.setZ(sqrt(1 - n.x()*n.x() - n.y()*n.y()));
 
-                        float alturadomembro = n.z()*(border.boundingRect().width()/ldepthisland);
-                        hb = n.z() * (border.boundingRect().width()/ldepthisland);
+                        float alturadomembro = n.z()*(border.boundingRect().width()*ldepthisland);
+                        hb = n.z() * (border.boundingRect().width()*ldepthisland);
 
                         // Calculo profundidade segundo o artigo e quali
                         hz = hb-hl;
@@ -1919,10 +1919,10 @@ void MainWindow::gerarbf(){
                                         ///calculou para um ponto no grid a norma dele. agora coloca no vetor final.
                                         //p.setZ(1);
 
-                                        p.setZ(n.z()*(boundingbox.width()/lsym));
+                                        p.setZ(n.z()*(boundingbox.width()*lsym));
                                         totalPoints.push_back(p);
                                         totalNormals.push_back(n);
-                                        p.setZ(n.z()*(-boundingbox.width()/lsym));
+                                        p.setZ(n.z()*(-boundingbox.width()*lsym));
                                         totalPoints.push_back(p);
                                         n.setZ(n.z()*-1);
                                         totalNormals.push_back(n);
@@ -1932,7 +1932,7 @@ void MainWindow::gerarbf(){
                                         normaldopontomaisalto = n;
                                         pontomaisalto.setX(ponto.x());
                                         pontomaisalto.setY(ponto.y());
-                                        hl = normaldopontomaisalto.z()*(poligonodomembro.boundingRect().width()/ldepthsym);
+                                        hl = normaldopontomaisalto.z()*(poligonodomembro.boundingRect().width()*ldepthsym);
                                     }
                                 }
                             }
@@ -1963,8 +1963,8 @@ void MainWindow::gerarbf(){
 
                         n.setZ(sqrt(1 - n.x()*n.x() - n.y()*n.y()));
 
-                        float alturadomembro = n.z()*(poligonodocorpo.boundingRect().width()/ldepthsym);
-                        hb = n.z() * (poligonodocorpo.boundingRect().width()/ldepthsym);
+                        float alturadomembro = n.z()*(poligonodocorpo.boundingRect().width()*ldepthsym);
+                        hb = n.z() * (poligonodocorpo.boundingRect().width()*ldepthsym);
 
                         // Calculo profundidade segundo o artigo e quali
                         hz = hb-hl;
@@ -2576,7 +2576,7 @@ void MainWindow::gerarbf(){
 
                                 n.setZ(sqrt(1 - n.x()*n.x() - n.y()*n.y()));
 
-                                float alturadomembro = n.z()*(poligonodocorpo.boundingRect().width()/lshapesvalue);
+                                float alturadomembro = n.z()*(poligonodocorpo.boundingRect().width()*lshapesvalue);
                                 alturadomembro += alturacontornointerno*ldepthadj;
                                 /// MUDAR A LINHA ACIMA - Não dá pra estimar
 
@@ -2838,7 +2838,7 @@ void MainWindow::gerarbf(){
                     float percent = var / linhaquefechaadjacente.length();
 
 
-                    QVector3D p(0,0, -poligonodabezier.boundingRect().width()/adjnewcontour);
+                    QVector3D p(0,0, -poligonodabezier.boundingRect().width()*adjnewcontour);
                     p.setX(linhaquefechaadjacente.pointAtPercent(percent).x());
                     p.setY(linhaquefechaadjacente.pointAtPercent(percent).y());
                     // p.setZ(alturacontornointerno*-5);
@@ -2948,7 +2948,7 @@ void MainWindow::gerarbf(){
 
                         alturadomembro = 0 ;
 
-                        alturadomembro = n.z()*(poligonodocorpo.boundingRect().width()/ldepthadj);
+                        alturadomembro = n.z()*(poligonodocorpo.boundingRect().width()*ldepthadj);
                         alturadomembro += adjnewcontour;
                         //alturadomembro = alturadomembro*ldepthadj;
 
@@ -3016,7 +3016,7 @@ void MainWindow::gerarbf(){
                             n.setZ(sqrt(1 - n.x()*n.x() - n.y()*n.y()));
 
 
-                            p.setZ(n.z()*(boundingbox1.width()/ladj));
+                            p.setZ(n.z()*(boundingbox1.width()*ladj));
 
 
                             if  (n.z() < 0.5){
@@ -3109,7 +3109,7 @@ void MainWindow::gerarbf(){
                 fOut << knownPoints.size() <<std::endl;
                 for(QVector3D p:knownPoints)
                 {
-                    if (almostEqual(p.z(),-poligonodabezier.boundingRect().width()/adjnewcontour)){ // Significa que é a linha que fecha, que deve estar invertida
+                    if (almostEqual(p.z(),-poligonodabezier.boundingRect().width()*adjnewcontour)){ // Significa que é a linha que fecha, que deve estar invertida
                         fOut << p.x() <<" " << p.y()<< " " << (p.z()*-1)-alturadomembro << std::endl;
 
                     } else {
@@ -3127,7 +3127,7 @@ void MainWindow::gerarbf(){
                     QVector3D n = totalNormals.at(k);
 
                     fOut << n.x() <<" " << n.y()<< " " << n.z()<< std::endl;
-                    if (almostEqual(p.z(),-poligonodabezier.boundingRect().width()/adjnewcontour)){ // Significa que é a linha que fecha, que deve estar invertida
+                    if (almostEqual(p.z(),-poligonodabezier.boundingRect().width()*adjnewcontour)){ // Significa que é a linha que fecha, que deve estar invertida
                         fOut << p.x() <<" " << p.y()<< " " << (p.z()*-1)-alturadomembro << std::endl;
 
                     } else {

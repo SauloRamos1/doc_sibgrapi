@@ -33,7 +33,7 @@
       <x>1350</x>
       <y>10</y>
       <width>381</width>
-      <height>192</height>
+      <height>401</height>
      </rect>
     </property>
    </widget>
@@ -626,12 +626,12 @@
    </widget>
    <zorder>groupBox</zorder>
    <zorder>pushButton</zorder>
-   <zorder>listWidget</zorder>
    <zorder>showPointsGrid</zorder>
    <zorder>showPointsContour</zorder>
    <zorder>showBoundingBox</zorder>
    <zorder>tabWidget</zorder>
    <zorder>pushButton_2</zorder>
+   <zorder>listWidget</zorder>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>

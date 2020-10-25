@@ -84,7 +84,7 @@ public:
         pushButton->setGeometry(QRect(1610, 610, 75, 23));
         listWidget = new QListWidget(centralWidget);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(1350, 10, 381, 192));
+        listWidget->setGeometry(QRect(1350, 10, 381, 401));
         groupBox = new QGroupBox(centralWidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
         groupBox->setGeometry(QRect(1350, 430, 391, 131));
@@ -251,12 +251,12 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         groupBox->raise();
         pushButton->raise();
-        listWidget->raise();
         showPointsGrid->raise();
         showPointsContour->raise();
         showBoundingBox->raise();
         tabWidget->raise();
         pushButton_2->raise();
+        listWidget->raise();
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         MainWindow->setStatusBar(statusBar);
