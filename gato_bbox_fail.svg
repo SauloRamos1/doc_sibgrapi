@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300mm"
+   height="300mm"
+   viewBox="0 0 300 300"
+   version="1.1"
+   id="svg915"
+   sodipodi:docname="gato_bbox_fail.svg"
+   inkscape:version="0.91 r13725">
+  <defs
+     id="defs909" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="626.72365"
+     inkscape:cy="339.04448"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     viewbox-height="300"
+     showguides="true"
+     inkscape:window-width="1278"
+     inkscape:window-height="1008"
+     inkscape:window-x="1273"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata912">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,3)">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.16500009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 217.67991,121.01163 c 15.42401,3.94965 30.19255,17.59624 32.30877,36.18092 3.0237,26.55417 16.27461,22.47076 18.55033,29.68005 7.60746,24.09977 -9.31319,39.56265 -14.58391,50.31863 -2.8572,5.83069 11.54806,6.68526 8.7111,12.18961 -5.24198,10.17067 -15.4149,2.15032 -20.04012,-4.49332"
+       id="path32"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26500106;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 234.572,134.115 c 0,0 10.085,7.781 5.738,28.947 5.307,9.126 9.006,22.459 23.377,25.973 4.34474,12.00805 -8.93348,28.76419 -21.11504,55.5951 -1.87364,4.12683 -3.72133,8.492 -5.47496,13.1149 -6.774,6.671 -14.01,8.762 -29.671,7.803 -6.153,-0.377 -8.983,2.066 -16.82,-2.512 -5.858,-4.346 -1.134,-10.582 -1.134,-10.582 0,0 4.725,-3.213 10.962,-3.402 0.944,-0.567 19.654,-18.332 23.434,-29.483 0.189,-3.212 -0.378,-7.086 -0.378,-7.086 l -36.097,-25.23 -24.757,9.072 c 2.263,34.668 14.758,58.516 0,67.279 -26.482,5.555 -24.414,-5.44 -21.733,-8.882 4.014,-4.861 10.713,-6.365 10.772,-10.017 2.176,-6.649 -11.324,-38.802 -12.292,-41.472 -1.919,0.233 -4.147,0.254 -6.608,0.084 -2.119,6.189 -16.678,43.557 -22.656,58.452 -7.748,6.048 -19.3932,8.166 -30.6382,4.481 -9.215,-2.672 -10.035,-15.557 10.584,-14.93 9.9982,-20.874 23.8122,-42.523 8.693,-58.964 -22.366,-20.758 -20.641,-58.981 -39.561,-68.096 -3.364,-1.62 -5.837,1.201 -21.883,-1.719 -3.665,-0.485 -8.431,-13.057 -9.426,-14.096 -5.826,-5.43 -2.176,-8.191 -3.607,-9.8674 -3.921706,-2.357458 -4.720582,-5.633301 -1.62329,-7.540066 1.791457,-1.102862 4.886341,-1.747713 9.43429,-1.491934 1.577,-0.655 0.714,-19.148 2.41,-21.734 6.102,-7.411 12.12,-11.6 17.315,-13.441 2.353,-0.833 4.536,-1.185 6.483,-1.137 2.797,-4.598 4.023,-7.213 5.542,-11.832 1.636,-4.973 3.499,-11.931 4.733,-16.294 4.39,4.999 9.427,10.782 13.174,30.94 6.579,3.662 13.406,6.422 16.82,24.048 1.159,9.45 -0.605,18.9 -5.859,28.3494 6.542,8.732 13.9842,12.901 18.5992,16.352 l 19.955,0.468 c 0,0 11.65,7.292 17.887,5.591 15.111,-0.574 45.34179,-14.54079 68.58079,-9.84979"
+       id="path18"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccscsccccccccccccccccscccsccscscccccccc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.36500096;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 217.73179,121.00621 c 5.58,3.594 11.01921,6.85779 16.84021,13.10879"
+       id="path837"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.165001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 240.31,163.062 C 238.721,161.093 235.771,155.353 231.286,145.581"
+       id="path839"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.265001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 207.426,265.548 C 206.145,263.074 202.077,260.246 207.938,254.209 218.029,254.726 229.873,231.659 235.613,212.808 238.71,205.603 213.053,196.58 201.378,187.536 196.133,185.929 190.083,186.854 187.393,187.253"
+       id="path841"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.265001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 201.378,187.536 C 178.182,169.741 178.767,158.316 180.495,142.912"
+       id="path843"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.165001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 162.636,196.325 C 153.859,200.151 146.201,202.256 139.383,203.233"
+       id="path845"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.465001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 132.775,203.317 C 139.113,188.539 126.251,196.303 138.618,161.047"
+       id="path847"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.165001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 98.7578,192.356 C 89.3678,170.777 90.2418,161.188 90.1118,151.062"
+       id="path849"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.165001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 81.7488,56.0476 C 82.0648,57.6906 82.0868,59.6726 82.0318,62.0476"
+       id="path855"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26500106;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 24.2808,98.5776 c 0.912,-4.264 3.845,-6.563 7.811,-9.032"
+       id="path857"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.46500099;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 53.8268,81.2666 C 52.890636,62.639429 45.673903,66.833419 41.627711,73.803856 c -1.468803,2.530331 -2.519807,5.42653 -2.700911,7.729744 -0.246,6.412 12.217,17.854 14.9,-0.267"
+       id="path859"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.265001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 58.2998,53.2336 56.3658,58.0806"
+       id="path4507"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.065001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 51.8168,54.3706 C 52.6528,44.3856 52.2438,34.8146 52.4088,25.0536 57.8998,28.9816 60.9458,35.1236 63.8418,41.4016"
+       id="path4513"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#2a97e8;fill-opacity:1;stroke:none;stroke-width:5.89707518;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 897.37249,906.73135 c -2.98361,-1.06429 -8.12646,-3.71781 -11.42857,-5.89673 -8.08548,-5.33527 -22.43239,-20.51351 -22.43239,-23.73225 0,-1.42586 10.75154,-23.6469 23.89231,-49.38009 47.76624,-93.53924 52.12998,-104.23121 52.32917,-128.21618 0.12728,-15.32599 -2.09952,-21.64269 -8.08625,-22.93806 -9.46281,-2.04751 -23.24703,-10.0808 -32.92692,-19.18943 -12.2557,-11.53243 -18.50815,-20.67907 -32.72464,-47.87251 l -11.20266,-21.42857 1.70002,-12.46186 c 2.09181,-15.33381 0.97484,-42.96373 -2.20855,-54.63168 -4.51904,-16.56348 -10.44701,-26.25524 -25.00462,-40.88054 -7.49375,-7.52859 -16.51786,-16.03387 -20.05357,-18.90061 -9.24583,-7.49646 -4.88955,-6.46743 7.39005,1.74567 28.43136,19.01605 50.50829,47.43963 60.33943,77.68574 1.98939,6.12049 4.66784,18.33477 5.9521,27.14286 7.17316,49.19673 18.31855,69.81199 48.20272,89.15896 11.79082,7.63336 14.46327,10.06704 16.76255,15.26498 9.24103,20.89088 9.53982,59.09516 0.6716,85.87647 -4.12371,12.45329 -17.31833,38.0228 -28.01302,54.28572 -24.43609,37.15883 -26.95643,42.82461 -22.63872,50.89233 0.83812,1.56604 7.93122,6.99197 15.76244,12.0576 7.83123,5.06562 14.65553,10.29678 15.16513,11.62478 1.49559,3.89743 -5.60431,15.02664 -11.87615,18.61607 -6.35093,3.6347 -11.76877,3.96062 -19.57146,1.17733 z"
+       id="path4149"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.28222224,0,0,0.28222224,0,-3)"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#ff3800;fill-opacity:1;stroke:none;stroke-width:5.89707518;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 692.79725,947.51382 c -7.321,-2.23098 -18.19928,-8.96246 -21.31179,-13.18771 -2.15485,-2.92523 -2.94684,-6.07286 -2.87559,-11.42857 0.14189,-10.66575 3.2688,-15.61975 12.33184,-19.53756 9.55505,-4.13047 20.54068,-7.10073 26.34357,-7.12264 3.86607,-0.0146 7.17276,-2.73913 23.86072,-19.65982 23.07469,-23.39648 36.42533,-39.13788 48.76707,-57.5 15.89201,-23.64424 18.19991,-31.16084 15.53569,-50.5984 l -0.9199,-6.71147 -60.52387,-42.32279 c -40.19106,-28.10457 -59.91885,-42.70686 -58.72295,-43.46604 2.49064,-1.58111 20.61142,-1.4741 29.29656,0.17301 4.63039,0.87813 10.3939,3.61228 16.26642,7.71662 5.00229,3.49613 25.31269,15.38601 45.13421,26.42196 19.82152,11.03595 40.03817,22.78105 44.92587,26.10023 10.7396,7.29312 20.40349,16.71423 21.51844,20.97786 1.69773,6.49214 -19.61034,61.88634 -33.94457,88.24508 -20.52108,37.73551 -40.16561,59.04638 -57.82458,62.72956 -13.75691,2.8693 -21.26442,21.34071 -14.25668,35.07701 l 2.88618,5.65737 -16.10047,-0.12884 c -8.85525,-0.0709 -18.02903,-0.71654 -20.38617,-1.43486 z"
+       id="path4153"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.28222224,0,0,0.28222224,0,-3)"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#0372de;fill-opacity:0.37058824;stroke:none;stroke-width:5.89707518;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 732.85747,942.88058 c -4.72053,-8.05496 -4.6457,-14.52439 0.25539,-22.08302 2.98413,-4.6022 5.05814,-6.20715 8.92858,-6.90931 29.11014,-5.28096 65.17085,-58.44624 90.71238,-133.7398 5.76517,-16.99503 6.274,-19.52534 4.91574,-24.44454 -3.22662,-11.68583 -15.83659,-20.99437 -67.24622,-49.64043 -38.24221,-21.30901 -46.28901,-26.37348 -62.80032,-39.52505 -35.90078,-28.59565 -56.92126,-56.18577 -64.31063,-84.40997 -3.07768,-11.7554 -4.03055,-37.31232 -2.0179,-54.12236 l 1.06901,-8.92857 6.68893,0 c 3.67891,0 40.39979,1.92857 81.60196,4.28571 41.20216,2.35714 77.50403,4.30071 80.6708,4.31903 l 5.75777,0.0333 10.71428,22.40767 c 5.89286,12.32423 14.1541,28.21995 18.35833,35.32383 4.20423,7.10388 11.18312,19.98758 15.50865,28.63044 17.29819,34.56361 32.29869,51.74867 54.30115,62.20918 6.90039,3.28062 13.51044,6.44529 14.68902,7.0326 3.04588,1.51784 4.4019,13.34919 2.81658,24.57496 -2.70373,19.14535 -9.18137,34.25024 -44.25904,103.20525 -24.96043,49.0667 -44.52914,90.89222 -49.85083,106.54943 -1.07614,3.1662 -4.50228,7.24161 -9.34166,11.11193 -18.36337,14.68624 -38.30311,20.26731 -72.51912,20.29787 l -21.01121,0.0188 -3.63164,-6.19694 z"
+       id="path4157"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.28222224,0,0,0.28222224,0,-3)"
+       inkscape:export-filename="/Users/sauloramos/Desktop/bbox_fail.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

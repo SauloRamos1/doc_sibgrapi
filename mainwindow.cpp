@@ -34,7 +34,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
+    //path = "C:/Users/srdcp/Dropbox/ProjetoDoutorado/ProjetoDoutorado/Apps/doc_v3";
+    path = "C:/Users/srdcp/Documents/doc_sibgrapi";
     //path = "/home/sauloramos/Documents/doc_sibgrapi";
 
     files = path.entryList(QStringList() << "*.svg" << "*.SVG",QDir::Files);
@@ -1056,6 +1057,7 @@ void MainWindow::gerarbf(){
 
         QPen pen;
         QPen penHigherPoint;
+        QPen boundingBoxesPen = QPen(QColor(Qt::black), 1, Qt::SolidLine);
         penHigherPoint = QPen(QColor(Qt::red), 3, Qt::SolidLine);
         switch (listadeciclos[i]->cycle) {
 
@@ -1210,7 +1212,7 @@ void MainWindow::gerarbf(){
             // qDebug () << ymax-ymin;
 
             listOfBoundingBoxes.push_back(boundingbox);
-            listOfPenBoundingBoxes.push_back(pen);
+            listOfPenBoundingBoxes.push_back(boundingBoxesPen);
 
             //if (ui->showBoundingBox->isChecked()){
             //    painter->drawRect(boundingbox);
@@ -1465,7 +1467,7 @@ void MainWindow::gerarbf(){
                         float hb; // Altura do ponto da normal mais alta no corpo
                         float hl;  // Altura do ponto da normal mais alta no membro simétrico
                         listOfBoundingBoxes.push_back(boundingbox);
-                        listOfPenBoundingBoxes.push_back(pen);
+                        listOfPenBoundingBoxes.push_back(boundingBoxesPen);
 
                         //                        if (ui->showBoundingBox->isChecked()){
                         //                            painter->drawRect(boundingbox);
@@ -1844,7 +1846,7 @@ void MainWindow::gerarbf(){
 
 
                         listOfBoundingBoxes.push_back(boundingbox);
-                        listOfPenBoundingBoxes.push_back(pen);
+                        listOfPenBoundingBoxes.push_back(boundingBoxesPen);
 
                         QVector3D pontomaisalto(0,0,0);
                         QVector3D normaldopontomaisalto (0,0,0);
